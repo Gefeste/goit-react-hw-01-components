@@ -1,7 +1,9 @@
 import { Profile } from "./Profile";
 import { Statistics } from "./Statistics";
+import { Information } from "./Information";
 import data from '../data'
 import user from '../user'
+
 export const App = () => {
 return (
   <div>
@@ -11,16 +13,19 @@ return (
         tag={user.tag}
         location={user.location}
         avatar={user.avatar}
-        stats={user.stats}
       />
    </div>; 
+   <div>
+    <Information 
+    stats={user.stats}
+    />
+   </div>
     <div>
       <Statistics 
-      title="Up"
+      title="Upload stats"
       stats={data}
       /> 
     </div>;
   </div>
-
   );
 };

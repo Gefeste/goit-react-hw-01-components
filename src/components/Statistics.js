@@ -1,12 +1,15 @@
 // import data from '../data'
 import propTypes from 'prop-types'
 
-export const Statistics = ({ stats }) => {
+export const Statistics = ({ stats, title }) => {
   
     return (
 
         <section class="statistics">
-        <h2 class="title">Upload stats</h2>
+          {title.length > 0 && (
+        <h2 class="title">{title}</h2>
+      )}
+        
       
         <ul class="stat-list">
           {stats.map(el => (
@@ -23,7 +26,7 @@ export const Statistics = ({ stats }) => {
 };
 
 Statistics.propTypes = {
-data: propTypes.arrayOf(
+stats: propTypes.arrayOf(
     propTypes.shape({
         label: propTypes.string.isRequired,
         percentage: propTypes.number.isRequired
