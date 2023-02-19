@@ -1,4 +1,3 @@
-// import data from '../data'
 import propTypes from 'prop-types'
 
 export const Statistics = ({ stats, title }) => {
@@ -7,10 +6,9 @@ export const Statistics = ({ stats, title }) => {
 
         <section class="statistics">
           {title.length > 0 && (
-        <h2 class="title">{title}</h2>
-      )}
+            <h2 class="title">{title}</h2>
+          )}
         
-      
         <ul class="stat-list">
           {stats.map(el => (
             <li class="item" key={el.id}>
