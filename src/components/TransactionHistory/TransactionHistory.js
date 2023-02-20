@@ -1,8 +1,11 @@
+import { Layout } from 'components/Profile/Profile.styled';
 import propTypes from 'prop-types'
+import { Table } from './TransactionHistory.styled';
 
 export const TransactionHistory = ({ items }) => {
-return (
-    <table class="transaction-history">
+  return (
+  <Layout>
+    <Table class="transaction-history">
   <thead>
     <tr>
       <th>Type</th>
@@ -20,7 +23,8 @@ return (
     </tr>
     ))}
   </tbody>
-</table>
+      </Table>
+      </Layout>
 )
 };
 
