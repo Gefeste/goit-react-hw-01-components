@@ -1,21 +1,26 @@
+import { Layout } from 'components/Profile/Profile.styled';
 import propTypes from 'prop-types'
+import { Item, List } from './Information.styled';
+
 
 export const Information = ({stats: { followers, views, likes }}) => {
-    return (
-        <ul class="stats">
-        <li>
+  return (
+      <Layout>
+        <List class="stats">
+        <Item>
           <span class="label">Followers</span>
           <span class="quantity">{followers}</span>
-        </li>
-        <li>
+        </Item>
+        <Item>
           <span class="label">Views</span>
           <span class="quantity">{views}</span>
-        </li>
-        <li>
+        </Item>
+        <Item>
           <span class="label">Likes</span>
           <span class="quantity">{likes}</span>
-        </li>
-      </ul>
+        </Item>
+      </List>
+   </Layout>
     )
 };
 

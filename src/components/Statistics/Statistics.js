@@ -1,25 +1,29 @@
+import { Layout } from 'components/Profile/Profile.styled'
 import propTypes from 'prop-types'
+import { Item, List, Title } from './Statistics.styled';
 
 export const Statistics = ({ stats, title }) => {
   
     return (
-
+<Layout>
         <section class="statistics">
           {title.length > 0 && (
-            <h2 class="title">{title}</h2>
+            <Title class="title">{title}</Title>
           )}
         
-        <ul class="stat-list">
-          {stats.map(el => (
-            <li class="item" key={el.id}>
+        <List class="stat-list">
+            {stats.map(el => (
+              <Item class="item" key={el.id}>
+              
             <span class="label">{el.label}</span>
             <span class="percentage">{el.percentage}%</span>
-          </li>
+               
+          </Item>
           ))}
           
-        </ul>
+        </List>
       </section>
-      
+      </Layout>
     );
 };
 
