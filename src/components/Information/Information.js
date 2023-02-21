@@ -5,18 +5,18 @@ import { Item, List } from './Information.styled';
 export const Information = ({ stats: { followers, views, likes } }) => {
   return (
     <Layout>
-      <List class="stats">
+      <List className="stats">
         <Item>
-          <span class="label">Followers</span>
-          <span class="quantity">{followers}</span>
+          <span className="label">Followers</span>
+          <span className="quantity">{followers}</span>
         </Item>
         <Item>
-          <span class="label">Views</span>
-          <span class="quantity">{views}</span>
+          <span className="label">Views</span>
+          <span className="quantity">{views}</span>
         </Item>
         <Item>
-          <span class="label">Likes</span>
-          <span class="quantity">{likes}</span>
+          <span className="label">Likes</span>
+          <span className="quantity">{likes}</span>
         </Item>
       </List>
     </Layout>

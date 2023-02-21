@@ -18,9 +18,9 @@ export const Item = styled.li`
   flex-direction: column;
   width: 100%;
   text-align: center;
-  background-color: ${getRandomHexColor()};
+  background-color: ${props => props.color};
 `;
 
-function getRandomHexColor() {
+export function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
 }

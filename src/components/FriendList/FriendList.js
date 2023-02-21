@@ -5,12 +5,17 @@ import { Item, List, UserName } from './FriendList.styled';
 export const FriendList = ({ friends }) => {
   return (
     <Layout>
-      <List class="friend-list">
+      <List className="friend-list">
         {friends.map(el => (
-          <Item isOnline={el.isOnline} class="item" key={el.id}>
-            <span class="status">{el.isOnline}</span>
-            <img class="avatar" src={el.avatar} alt="User avatar" width="48" />
-            <UserName class="name">{el.name}</UserName>
+          <Item isOnline={el.isOnline} className="item" key={el.id}>
+            <span className="status">{el.isOnline}</span>
+            <img
+              className="avatar"
+              src={el.avatar}
+              alt="User avatar"
+              width="48"
+            />
+            <UserName className="name">{el.name}</UserName>
           </Item>
         ))}
       </List>

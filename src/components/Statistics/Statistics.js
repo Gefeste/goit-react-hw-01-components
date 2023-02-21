@@ -1,17 +1,17 @@
 import { Layout } from 'components/Profile/Profile.styled';
 import propTypes from 'prop-types';
-import { Item, List, Title } from './Statistics.styled';
+import { getRandomHexColor, Item, List, Title } from './Statistics.styled';
 
 export const Statistics = ({ stats, title }) => {
   return (
     <Layout>
-      <section class="statistics">
-        {title && <Title class="title">{title}</Title>}
-        <List class="stat-list">
+      <section className="statistics">
+        {title && <Title className="title">{title}</Title>}
+        <List className="stat-list">
           {stats.map(el => (
-            <Item class="item" key={el.id}>
-              <span class="label">{el.label}</span>
-              <span class="percentage">{el.percentage}%</span>
+            <Item className="item" key={el.id} color={getRandomHexColor()}>
+              <span className="label">{el.label}</span>
+              <span className="percentage">{el.percentage}%</span>
             </Item>
           ))}
         </List>

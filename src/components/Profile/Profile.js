@@ -3,12 +3,12 @@ import { About, Avatar, Layout, UserName } from './Profile.styled';
 
 export const Profile = ({ username, tag, location, avatar }) => {
   return (
-    <Layout class="profile">
-      <div class="description">
-        <Avatar src={avatar} alt="User avatar" class="avatar" />
-        <UserName class="name">{username}</UserName>
-        <About class="tag">@{tag}</About>
-        <About class="location">{location}</About>
+    <Layout className="profile">
+      <div className="description">
+        <Avatar src={avatar} alt="User avatar" className="avatar" />
+        <UserName className="name">{username}</UserName>
+        <About className="tag">@{tag}</About>
+        <About className="location">{location}</About>
       </div>
     </Layout>
   );
